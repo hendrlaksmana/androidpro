@@ -2,7 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/tree"
+    android:background="@drawable/bg_02"
 
     >
     <ScrollView
@@ -26,7 +26,7 @@
             <ImageView
                 android:layout_width="300dp"
                 android:layout_height="150dp"
-                android:background="@drawable/logo1"
+                android:background="@drawable/logo"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginBottom="20dp"/>
             <EditText
@@ -34,7 +34,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Nama"
-                android:textColorHint="#fff"
+                android:textColorHint="#000"
                 android:background="@android:color/transparent"
                 android:maxLength="16"
                 android:padding="15dp"
@@ -45,7 +45,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="NIK"
-                android:textColorHint="#fff"
+                android:textColorHint="#000"
                 android:background="@android:color/transparent"
                 android:padding="15dp"
                 android:inputType="number"
@@ -57,7 +57,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Username"
-                android:textColorHint="#fff"
+                android:textColorHint="#000"
                 android:background="@android:color/transparent"
                 android:padding="15dp"
                 android:layout_marginBottom="5dp"
@@ -67,7 +67,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="No Telp"
-                android:textColorHint="#fff"
+                android:textColorHint="#000"
                 android:background="@android:color/transparent"
                 android:padding="15dp"
                 android:inputType="number"
@@ -79,7 +79,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Alamat"
-                android:textColorHint="#fff"
+                android:textColorHint="#000"
                 android:background="@android:color/transparent"
                 android:padding="15dp"
                 android:layout_marginBottom="5dp"
@@ -89,7 +89,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Email"
-                android:textColorHint="#fff"
+                android:textColorHint="#000"
                 android:background="@android:color/transparent"
                 android:padding="15dp"
                 android:layout_marginBottom="5dp"
@@ -104,13 +104,13 @@
                 android:hint="Password"
                 android:inputType="textPassword"
                 android:padding="15dp"
-                android:textColorHint="#fff" />
+                android:textColorHint="#000" />
             <EditText
                 android:id="@+id/et_confirm_password"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Confirm Password"
-                android:textColorHint="#fff"
+                android:textColorHint="#000"
                 android:background="@android:color/transparent"
                 android:padding="15dp"
                 android:inputType="textPassword"
@@ -130,7 +130,7 @@
         android:text="Jenis Kelamin"
         android:layout_marginLeft="10dp"
         android:layout_marginTop="10dp"
-        android:textColor="#fff"
+        android:textColor="#000"
         />
     <LinearLayout
         android:layout_width="match_parent"
@@ -144,7 +144,7 @@
             android:layout_height="wrap_content"
             android:text="Laki-laki"
             android:layout_margin="10dp"
-            android:textColor="#fff"
+            android:textColor="#000"
             />
         <RadioButton
             android:id="@+id/jkp"
@@ -153,7 +153,7 @@
             android:layout_height="wrap_content"
             android:text="Perempuan"
             android:layout_margin="10dp"
-            android:textColor="#fff"
+            android:textColor="#000"
             />
     </LinearLayout>
 </LinearLayout>
@@ -162,9 +162,8 @@
                 android:id="@+id/btn_register"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@drawable/round"
-                android:text="@string/register"
-                android:textColor="#fff"
+
+                android:textColor="#000"
                 />
 
         </LinearLayout>
