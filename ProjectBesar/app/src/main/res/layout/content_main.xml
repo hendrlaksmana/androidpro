@@ -28,12 +28,6 @@
             android:layout_width="match_parent"
             android:gravity="center_horizontal"
             android:paddingBottom="50dp">
-
-            <TextView
-                android:id="@+id/txa1"
-                android:text=""
-                android:padding="2dp">
-            </TextView>
             <Button
                 android:id="@+id/btn_katalog"
                 android:layout_width="wrap_content"
@@ -73,10 +67,11 @@
                 android:padding="1dp"
                 />
             <TextView
-                android:id="@+id/txd3"
+                android:id="@+id/txa1"
                 android:text=""
                 android:padding="2dp">
             </TextView>
+
         </TableRow>
 
     </TableLayout>
