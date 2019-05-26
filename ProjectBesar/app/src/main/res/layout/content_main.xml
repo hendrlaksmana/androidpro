@@ -17,7 +17,7 @@
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true"
-            android:src="@drawable/logo"
+            android:src="@drawable/tokosm"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:paddingBottom="10dp"
             android:paddingTop="50dp"/>
@@ -28,44 +28,7 @@
             android:layout_width="match_parent"
             android:gravity="center_horizontal"
             android:paddingBottom="50dp">
-            <Button
-                android:id="@+id/btn_katalog"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:drawableTop="@drawable/katalog"
-                android:text="Katalog"
-                android:textStyle="bold"
-                android:gravity="center|center_horizontal" />
 
-            <TextView
-                android:id="@+id/txb1"
-                android:text=""
-                android:padding="2dp">
-            </TextView>
-            <Button
-                android:id="@+id/btn_artikel"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:drawableTop="@drawable/artikel"
-                android:text="Artikel"
-                android:textStyle="bold"
-                android:gravity="center|center_horizontal"
-                android:padding="1dp" />
-            <TextView
-                android:id="@+id/txc2"
-                android:text=""
-                android:padding="2dp">
-            </TextView>
-            <Button
-                android:id="@+id/btn_about"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:drawableTop="@drawable/aboutus"
-                android:text="About us"
-                android:textStyle="bold"
-                android:gravity="center|center_horizontal"
-                android:padding="1dp"
-                />
             <TextView
                 android:id="@+id/txa1"
                 android:text=""
