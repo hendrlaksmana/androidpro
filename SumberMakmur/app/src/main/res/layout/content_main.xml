@@ -1,0 +1,42 @@
+<RelativeLayout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_02"
+    android:gravity="top" >
+
+    <TableLayout
+        android:id="@+id/tableLayout1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:shrinkColumns="*"
+        android:stretchColumns="*">
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/toko"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:paddingBottom="10dp"
+            android:paddingTop="50dp"/>
+
+        <TableRow
+            android:id="@+id/tableRowBtn1"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:gravity="center_horizontal"
+            android:paddingBottom="50dp">
+
+            <TextView
+                android:id="@+id/txa1"
+                android:text=""
+                android:padding="2dp">
+            </TextView>
+
+        </TableRow>
+
+    </TableLayout>
+
+</RelativeLayout>
