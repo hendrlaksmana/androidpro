@@ -70,4 +70,5 @@ public class home_fragment extends Fragment {
         recom_list.add(new recom_item("Bibit Bobot","Rp 66.000",R.drawable.bibit2));
         recom_list.add(new recom_item("Pupuk","135.000",R.drawable.pupuk));
     }
+
 }

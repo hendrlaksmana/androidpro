@@ -2,12 +2,13 @@ package com.example.sumbermakmur;
 
 import android.os.Bundle;
 import android.support.annotation.NonNull;
-import android.support.design.widget.BottomNavigationView;
+import android.support.design.widget.NavigationView;
 import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
+
 
 public class MainActivity extends AppCompatActivity {
 
@@ -17,8 +18,10 @@ public class MainActivity extends AppCompatActivity {
     ViewPager pager;
     ViewPagerAdapter adapter;
     SlidingTabLayout tabs;
-    CharSequence Titles[] = {"Home", "Events"};
-    int Numboftabs = 2;
+    CharSequence Titles[] = {"home", "katalog","informasi seputar pertanian","cara pembayaran","tentang toko","akun"};
+    int Numboftabs = 6;
+
+
 
 
     @Override
@@ -54,6 +57,8 @@ public class MainActivity extends AppCompatActivity {
 
         // Setting the ViewPager For the SlidingTabsLayout
         tabs.setViewPager(pager);
+
+
 
 
     }

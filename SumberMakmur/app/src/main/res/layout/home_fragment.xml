@@ -6,18 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".home_fragment">
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="80dp"
-        android:id="@+id/labelhome"
-        android:text="Home"
-        android:textSize="30sp"
-        android:textAlignment="center"
-        android:textColor="@color/colorPrimaryDark"
-        android:padding="20dp"
-        android:textStyle="bold"
-        android:layout_marginBottom="5dp"
-        android:layout_marginTop="20dp"/>
 
     <com.synnapps.carouselview.CarouselView
         android:id="@+id/carousel"
@@ -29,7 +17,6 @@
         app:radius="6dp"
         app:strokeColor="#FF777777"
         app:strokeWidth="1dp"
-        android:layout_below="@+id/labelhome"
         android:layout_marginBottom="30dp"
         />
 
@@ -37,7 +24,7 @@
         android:layout_width="match_parent"
         android:layout_height="20dp"
         android:textColor="@color/colorPrimaryDark"
-        android:text="Best Offer"
+        android:text="Terlaris"
         android:textStyle="bold"
         android:layout_marginLeft="20dp"
         android:layout_below="@id/carousel"
@@ -47,7 +34,7 @@
         android:layout_width="match_parent"
         android:layout_height="20dp"
         android:textColor="@color/colorPrimaryDark"
-        android:text="Recommended Product"
+        android:text="Produk Terlaris"
         android:textSize="12dp"
         android:layout_marginLeft="20dp"
         android:layout_marginBottom="10dp"
@@ -63,3 +50,4 @@
 
 
 </RelativeLayout>
+

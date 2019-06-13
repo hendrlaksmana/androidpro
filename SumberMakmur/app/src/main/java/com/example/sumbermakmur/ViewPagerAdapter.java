@@ -9,12 +9,12 @@ import android.support.v4.app.FragmentStatePagerAdapter;
  */
 public class ViewPagerAdapter extends FragmentStatePagerAdapter {
 
-    CharSequence Titles[]; // This will Store the Titles of the Tabs which are Going to be passed when ViewPagerAdapter is created
+    CharSequence[] Titles; // This will Store the Titles of the Tabs which are Going to be passed when ViewPagerAdapter is created
     int NumbOfTabs; // Store the number of tabs, this will also be passed when the ViewPagerAdapter is created
 
 
     // Build a Constructor and assign the passed Values to appropriate values in the class
-    public ViewPagerAdapter(FragmentManager fm,CharSequence mTitles[], int mNumbOfTabsumb) {
+    public ViewPagerAdapter(FragmentManager fm, CharSequence[] mTitles, int mNumbOfTabsumb) {
         super(fm);
 
         this.Titles = mTitles;
@@ -26,15 +26,35 @@ public class ViewPagerAdapter extends FragmentStatePagerAdapter {
     @Override
     public Fragment getItem(int position) {
 
-        if(position == 0) // if the position is 0 we are returning the First tab
+        if(position == 0)
         {
             home_fragment tab1 = new home_fragment();
             return tab1;
         }
-        else             // As we are having 2 tabs if the position is now 0 it must be 1 so we are returning second tab
+        else if(position == 1)
         {
-            Katalog tab2 = new Katalog();
+            katalog tab2 = new katalog();
             return tab2;
+        }
+         else if(position == 2)
+        {
+            Artikel tab3 = new Artikel();
+            return tab3;
+        }
+          else if(position == 3)
+        {
+            cara_pembayaran tab4 = new cara_pembayaran();
+            return tab4;
+        }
+           else if(position == 4)
+        {
+            TentangToko tab5 = new TentangToko();
+            return tab5;
+        }
+           else
+        {
+            Akun tab6 = new Akun();
+            return tab6;
         }
 
 

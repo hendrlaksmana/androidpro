@@ -16,16 +16,16 @@
             android:orientation="vertical">
 
             <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="360dp">
+                android:layout_width="wrap_content"
+                android:layout_height="250dp">
 
 
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:scaleType="centerCrop"
-                    android:src="@drawable/alatpertanian1"
-                    android:id="@+id/recom_image"/>
+                    android:src="@drawable/toko"
+                    android:id="@+id/item_image"/>
 
                 <ImageView
                     android:layout_width="wrap_content"
@@ -47,9 +47,9 @@
                 android:weightSum="100">
 
                 <LinearLayout
-                    android:layout_width="0dp"
+                    android:layout_width="5dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="50">
+                    android:layout_weight="100">
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -61,56 +61,37 @@
                             android:layout_height="wrap_content"
                             android:layout_marginBottom="4dp"
                             android:fontFamily="@font/calibri"
-                            android:text="Clurit"
+                            android:text="      Toko Pertanian Sumber Makmur adalah toko yang menjual kebutuhan pertanian, seperti pupuk, bibit, benih, alat pertanian dan lain-lain."
                             android:textColor="#000000"
-                            android:textSize="24sp"
-                            android:id="@+id/recom_name"/>
+                            android:textSize="18sp"
+                            android:id="@+id/item_name"/>
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:layout_marginBottom="4dp"
                             android:fontFamily="@font/calibri"
-                            android:text="Rp 50.000"
-                            android:textColor="@color/colorPrimaryDark"
-                            android:textSize="16sp"
-                            android:textStyle="bold"
-                            android:id="@+id/recom_price"/>
+                            android:text="      Toko Pertanian Sumber Makmur berlokasi di Jl. Nasional III, Tembaan, Kepatihan, Kaliwates, Jember, Jawa timur. Hubungi kami : 082123445678 (Triyanto)"
+                            android:textColor="#000000"
+                            android:textSize="18sp"
+                            android:id="@+id/item_price"/>
                     </LinearLayout>
 
                 </LinearLayout>
 
             </LinearLayout>
 
-            <View
-                android:layout_width="200dp"
-                android:layout_height="4dp"
-                android:layout_gravity="center"
-                android:layout_marginTop="8dp"
-                android:layout_marginBottom="8dp"
-                android:background="#dedede" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="bla bla bla bla bla bla bla"
+                android:text="Lokasi Toko"
                 android:padding="16dp"
                 android:textColor="#444444"
                 android:fontFamily="@font/calibri"
                 android:textSize="16sp"
                 />
 
-            <Button
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_margin="16dp"
-                android:background="@color/colorPrimaryDark"
-                android:fontFamily="@font/calibri"
-                android:text="@string/beli"
-                android:id="@+id/btnBuy"
-                android:textAllCaps="false"
-                android:textColor="#fff"
-                android:textSize="24sp" />
         </LinearLayout>
 
     </ScrollView>
