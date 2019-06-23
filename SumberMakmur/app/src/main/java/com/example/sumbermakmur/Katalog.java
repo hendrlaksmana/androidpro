@@ -14,6 +14,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
+import android.widget.Button;
 import android.widget.ListView;
 
 import java.util.ArrayList;
@@ -24,6 +25,7 @@ public class katalog extends Fragment {
     ArrayList<DataModel> dataModels;
     ListView listView;
     private static CustomAdapter adapter;
+    Button btnBuy;
 
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -55,7 +57,7 @@ public class katalog extends Fragment {
 
                 DataModel dataModel= dataModels.get(position);
 
-                Snackbar.make(view, dataModel.getItem_name()+" Harga "+dataModel.getItem_price(), Snackbar.LENGTH_LONG)
+                Snackbar.make(btnBuy, dataModel.getItem_name()+" Harga "+dataModel.getItem_price(), Snackbar.LENGTH_LONG)
                         .setAction("Check Out", new View.OnClickListener() {
                             @Override
                             public void onClick(View v) {
