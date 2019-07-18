@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/product_item">
 
     <ScrollView
@@ -22,12 +21,13 @@
 
 
                 <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:scaleType="centerCrop"
-                    android:src="@drawable/alatpertanian1"
-                    android:id="@+id/item_image"
-                    android:layout_marginTop="10dp"/>
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp"
+                    app:srcCompat="@mipmap/ic_launcher"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:id="@+id/imgproduk"/>
 
 
             </RelativeLayout>
@@ -55,20 +55,20 @@
                             android:layout_height="wrap_content"
                             android:layout_marginBottom="4dp"
                             android:fontFamily="@font/calibri"
-                            android:text="Clurit"
+                            android:text="Nama"
                             android:textColor="#000000"
                             android:textSize="24sp"
-                            android:id="@+id/item_name"/>
+                            android:id="@+id/nama_produk"/>
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/calibri"
-                            android:text="Rp 50.000"
+                            android:text="Harga"
                             android:textColor="@color/colorPrimaryDark"
                             android:textSize="16sp"
                             android:textStyle="bold"
-                            android:id="@+id/item_price"/>
+                            android:id="@+id/harga"/>
                     </LinearLayout>
 
                 </LinearLayout>
@@ -79,7 +79,7 @@
                 android:layout_width="300dp"
                 android:layout_height="wrap_content"
                 android:id="@+id/deskripsi"
-                android:text="bla bla bla bla bla bla bla"
+                android:text="Deskripsi"
                 android:padding="16dp"
                 android:layout_gravity="center"
                 android:textColor="#444444"
@@ -104,4 +104,4 @@
     </ScrollView>
 
 
-</android.support.design.widget.CoordinatorLayout>
+</LinearLayout>

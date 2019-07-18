@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.sumbermakmur">
 
+    <uses-permission android:name="android.permission.INTERNET"/>
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -9,8 +11,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name="com.example.SumberMakmur.AdapterArtikel"></activity>
-        <activity android:name="com.example.SumberMakmur.CaraPembayaran" />
+        <activity android:name="com.example.sumbermakmur.AdapterArtikel"></activity>
+        <activity android:name="com.example.sumbermakmur.cara_pembayaran" />
         <activity
             android:name=".MainActivity"
             android:label="@string/app_name"

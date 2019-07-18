@@ -1,96 +1,64 @@
 package com.example.sumbermakmur;
 
 import android.content.Context;
-import android.support.design.widget.Snackbar;
-import android.util.Log;
+import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.animation.Animation;
-import android.view.animation.AnimationUtils;
-import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
-import java.util.ArrayList;
 
+import com.bumptech.glide.Glide;
+
+import java.util.ArrayList;
+import java.util.HashMap;
 
 /**
- * Created by anupamchugh on 09/02/16.
+ * Created by AJISETYA.
  */
-public class AdapterArtikel extends ArrayAdapter<ModelArtikel> implements View.OnClickListener{
+public class AdapterArtikel extends RecyclerView.Adapter<AdapterArtikel.ViewHolder>{
 
-    private ArrayList<ModelArtikel> dataSet;
-    Context mContext;
+    Context context;
+    ArrayList<HashMap<String, String>> list_data;
 
-    // View lookup cache
-    private static class ViewHolder {
-        TextView title;
-        TextView deskripsi;
-        ImageView Image;
+    public AdapterArtikel(Context artikel, ArrayList<HashMap<String, String>> list_data) {
+        this.context = artikel;
+        this.list_data = list_data;
     }
-
-
-
-    public AdapterArtikel(ArrayList<ModelArtikel> data, Context context) {
-        super(context, R.layout.list_artikel, data);
-        this.dataSet = data;
-        this.mContext=context;
-
-    }
-
 
     @Override
-    public void onClick(View v) {
-
-
-        int position=(Integer) v.getTag();
-        Object object= getItem(position);
-        ModelArtikel Model=(ModelArtikel) object;
-
-
-
+    public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.list_artikel, null);
+        return new ViewHolder(view);
     }
 
-    private int lastPosition = -1;
+    @Override
+    public void onBindViewHolder(ViewHolder holder, int position) {
+        Glide.with(context)
+                .load("http://192.168.43.4/rest_sm/foto_artikel" + list_data.get(position).get("foto"))
+                .crossFade()
+                .placeholder(R.mipmap.ic_launcher)
+                .into(holder.img);
+        holder.Judul.setText(list_data.get(position).get("judul_artikel"));
+        holder.Deskripsi.setText(list_data.get(position).get("deskripsi"));
+    }
 
     @Override
-    public View getView(int position, View convertView, ViewGroup parent) {
-        // Get the data item for this position
-        ModelArtikel Model = getItem(position);
-        // Check if an existing view is being reused, otherwise inflate the view
-        ViewHolder viewHolder; // view lookup cache stored in tag
+    public int getItemCount() {
+        return list_data.size();
+    }
 
-        final View result;
+    public class ViewHolder extends RecyclerView.ViewHolder {
+        TextView Judul;
+        TextView Deskripsi;
+        ImageView img;
 
-        if (convertView == null) {
+        public ViewHolder(View itemView) {
+            super(itemView);
 
-
-            viewHolder = new ViewHolder();
-            LayoutInflater inflater = LayoutInflater.from(getContext());
-            convertView = inflater.inflate(R.layout.list_artikel, parent, false);
-            viewHolder.title = (TextView) convertView.findViewById(R.id.title);
-            viewHolder.deskripsi = (TextView) convertView.findViewById(R.id.deskripsi);
-            viewHolder.Image = (ImageView) convertView.findViewById(R.id.image);
-
-            result=convertView;
-
-            convertView.setTag(viewHolder);
-        } else {
-            viewHolder = (ViewHolder) convertView.getTag();
-            result=convertView;
+            Judul = (TextView) itemView.findViewById(R.id.judul);
+            Deskripsi = (TextView) itemView.findViewById(R.id.deskripsi);
+            img = (ImageView) itemView.findViewById(R.id.img);
         }
-
-        Animation animation = AnimationUtils.loadAnimation(mContext, (position > lastPosition) ? R.anim.up_from_bottom : R.anim.down_from_top);
-        result.startAnimation(animation);
-        lastPosition = position;
-
-
-        viewHolder.title.setText(Model.getTitle());
-        viewHolder.deskripsi.setText(Model.getDeskripsi());
-        viewHolder.Image.setImageResource(Model.getImage());
-        // Return the completed view to render on screen
-        return convertView;
     }
-
-
 }
